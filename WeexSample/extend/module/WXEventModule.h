@@ -7,22 +7,8 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "WXModuleProtocol.h"
+#import <WeexSDK/WeexSDK.h>
 
-@interface WXDebugTool : NSObject<WXModuleProtocol>
-
-//+ (void)showFPS;
-
-+ (void)setDebug:(BOOL)isDebug;
-
-+ (BOOL)isDebug;
-
-+ (void)setReplacedBundleJS:(NSURL*)url;
-
-+ (NSString*)getReplacedBundleJS;
-
-+ (void)setReplacedJSFramework:(NSURL*)url;
-
-+ (NSString*)getReplacedJSFramework;
+@interface WXEventModule : NSObject <WXEventModuleProtocol, WXModuleProtocol>
 
 @end

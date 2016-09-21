@@ -6,10 +6,8 @@
  * For the full copyright and license information,please view the LICENSE file in the root directory of this source tree.
  */
 
-#import "WXModuleProtocol.h"
+#import <Foundation/Foundation.h>
+#import <WeexSDK/WeexSDK.h>
 
-@protocol WXEventModuleProtocol<WXModuleProtocol>
-
-- (void)openURL:(NSString *)url;
-
+@interface WXImgLoaderDefaultImpl : NSObject<WXImgLoaderProtocol, WXModuleProtocol>
 @end

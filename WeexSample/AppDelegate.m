@@ -3,16 +3,14 @@
 //  WeexSample
 //
 //  Created by zifan.zx on 6/12/16.
-//  Copyright © 2016 com.taobao.weex. All rights reserved.
+//  Copyright © 2016. All rights reserved.
 //
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "DemoeDefine.h"
 
-#import <WeexSDK/WXSDKEngine.h>
-#import <WeexSDK/WXDebugTool.h>
-#import <WeexSDK/WXLog.h>
-#import <WeexSDK/WXAppConfiguration.h>
+#import <WeexSDK/WeexSDK.h>
 
 @interface AppDelegate ()
 
@@ -24,20 +22,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //业务配置，非必需
-    [WXAppConfiguration setAppGroup:@"AliApp"];
-    [WXAppConfiguration setAppName:@"WeexDemo"];
+    //not necessary
+    [WXAppConfiguration setAppGroup:@"MyApp"];
+    [WXAppConfiguration setAppName:@"MyApp"];
     [WXAppConfiguration setAppVersion:@"1.0.0"];
     
-    //初始化SDK环境
+    //init SDK environment
     [WXSDKEngine initSDKEnviroment];
     
-    //设置Log输出等级：调试环境默认为Debug，正式发布会自动关闭。
-    [WXLog setLogLevel:WXLogLevelVerbose];
+    //set log
+    [WXLog setLogLevel:WXLogLevelAll];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    ViewController * viewController = [[ViewController alloc] init];
+    viewController.url = [NSURL URLWithString:HOME_URL];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
     [self.window makeKeyAndVisible];
     
     return YES;

@@ -3,11 +3,12 @@
 //  WeexSample
 //
 //  Created by zifan.zx on 6/12/16.
-//  Copyright © 2016 com.taobao.weex. All rights reserved.
+//  Copyright © 2016. All rights reserved.
 //
 
 #import "ViewController.h"
-#import <WeexSDK/WXSDKInstance.h>
+
+#import <WeexSDK/WeexSDK.h>
 
 @interface ViewController ()
 
