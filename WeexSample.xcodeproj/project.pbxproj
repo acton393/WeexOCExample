@@ -190,12 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCFAEC6A1D0D36070087102E /* Build configuration list for PBXNativeTarget "WeexSample" */;
 			buildPhases = (
-				58091D79B21C127C8BE34AF6 /* Check Pods Manifest.lock */,
+				58091D79B21C127C8BE34AF6 /* [CP] Check Pods Manifest.lock */,
 				DCFAEC4F1D0D36070087102E /* Sources */,
 				DCFAEC501D0D36070087102E /* Frameworks */,
 				DCFAEC511D0D36070087102E /* Resources */,
-				F780F83C3DB3DF2C262714FC /* Embed Pods Frameworks */,
-				56D80383DF6F60EBBBA0571C /* Copy Pods Resources */,
+				F780F83C3DB3DF2C262714FC /* [CP] Embed Pods Frameworks */,
+				56D80383DF6F60EBBBA0571C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,14 +252,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		56D80383DF6F60EBBBA0571C /* Copy Pods Resources */ = {
+		56D80383DF6F60EBBBA0571C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,14 +267,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeexSample/Pods-WeexSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		58091D79B21C127C8BE34AF6 /* Check Pods Manifest.lock */ = {
+		58091D79B21C127C8BE34AF6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,14 +282,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F780F83C3DB3DF2C262714FC /* Embed Pods Frameworks */ = {
+		F780F83C3DB3DF2C262714FC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
