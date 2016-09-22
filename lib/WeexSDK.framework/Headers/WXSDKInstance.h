@@ -52,6 +52,7 @@ typedef NS_ENUM(NSInteger, WXState) {//state.code
     WeexInstanceForeground,
     WeexInstanceBackground,
     WeexInstanceMemoryWarning,
+    WeexInstanceBindChanged,
     WeexInstanceDestroy
 };
 
@@ -178,23 +179,29 @@ typedef NS_ENUM(NSInteger, WXErrorCode) {//error.code
 /**
  * get Componet instance by ref
  */
-- (WXComponent *) componentForRef:(NSString *)ref;
+- (WXComponent *)componentForRef:(NSString *)ref;
+
+/**
+ * Number of components created
+ */
+- (NSUInteger)numberOfComponents;
 
 /**
  * application performance statistics
  */
 @property (nonatomic, strong) NSString *bizType;
 @property (nonatomic, strong) NSString *pageName;
-@property (nonatomic, strong) NSDictionary *properties;
 @property (nonatomic, weak) id pageObject;
-@property (nonatomic, strong) NSDate *renderStartDate;
-@property (nonatomic) NSTimeInterval networkTime;
-@property (nonatomic) NSTimeInterval communicateTime;
-extern NSTimeInterval JSLibInitTime;
-@property (nonatomic) NSTimeInterval screenRenderTime;
+@property (nonatomic, strong) NSMutableDictionary *performanceDict;
 
-- (void)finishPerformance;
+
+@property (nonatomic, strong) NSDictionary *properties DEPRECATED_MSG_ATTRIBUTE();
+@property (nonatomic, assign) NSTimeInterval networkTime DEPRECATED_MSG_ATTRIBUTE();
+
+- (void)finishPerformance DEPRECATED_MSG_ATTRIBUTE();
 
 - (void)reloadData:(id)data  DEPRECATED_MSG_ATTRIBUTE("Use refreshInstance: method instead.");
+
+- (void)creatFinish;
 
 @end

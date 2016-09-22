@@ -9,11 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
-#import <WeexSDK/WXSDKEngine.h>
-#import <WeexSDK/WXDebugTool.h>
-#import <WeexSDK/WXLog.h>
-#import <WeexSDK/WXAppConfiguration.h>
-
+#import <WeexSDK/WeexSDK.h>
 @interface AppDelegate ()
 
 @end
@@ -24,20 +20,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //业务配置，非必需
-    [WXAppConfiguration setAppGroup:@"AliApp"];
+    //not necessary
+    [WXAppConfiguration setAppGroup:@"myApp"];
     [WXAppConfiguration setAppName:@"WeexDemo"];
     [WXAppConfiguration setAppVersion:@"1.0.0"];
     
-    //初始化SDK环境
+    // register module
+    [WXSDKEngine registerModule:@"event" withClass:NSClassFromString(@"WXEventModule")];
+    // register handler
+    [WXSDKEngine registerHandler:NSClassFromString(@"WXImgLoaderDefaultImpl") withProtocol:@protocol(WXImgLoaderProtocol)];
+    //init SDK
     [WXSDKEngine initSDKEnviroment];
     
-    //设置Log输出等级：调试环境默认为Debug，正式发布会自动关闭。
-    [WXLog setLogLevel:WXLogLevelVerbose];
+    //set logLevel
+    [WXLog setLogLevel:WXLogLevelAll];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    ViewController *demoViewControler = [[ViewController alloc] init];
+    demoViewControler.url =[NSURL URLWithString:[NSString stringWithFormat:@"file://%@/bundlejs/index.js",[NSBundle mainBundle].bundlePath]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:demoViewControler];
     [self.window makeKeyAndVisible];
     
     return YES;

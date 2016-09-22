@@ -58,9 +58,7 @@
     _instance.updateFinish = ^(UIView *view) {
         NSLog(@"update Finish");
     };
-    NSString *url = [NSString stringWithFormat:@"file://%@/hello.js",[NSBundle mainBundle].bundlePath];
-    
-    [_instance renderWithURL:[NSURL URLWithString:url] options:@{@"bundleUrl":url} data:nil];
+    [_instance renderWithURL:_url options:@{@"bundleUrl": [NSString stringWithFormat:@"file://%@/bundlejs/",[NSBundle mainBundle].bundlePath]} data:nil];
 }
 
 - (void)didReceiveMemoryWarning

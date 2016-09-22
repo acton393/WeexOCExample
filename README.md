@@ -32,6 +32,7 @@ recommend you to <a href="#compile">compile</a> from Weex source [here](https://
 - Import the framework you get above and import system framework
   ![img](http://img1.tbcdn.cn/L1/461/1/ce309c54c7b3dd3607d7a3d07c44bfd0e0e10f86) 
 - Add `SocketRocket`：copy [here](https://github.com/alibaba/weex/tree/dev/ios/sdk/WeexSDK/dependency) `SRWebSocket.h/m` to your own Project  （if cocoaPods is used in your project，add `pod 'SocketRocket'` to Podfie )
+- Add `SDWebImage`  [here](https://github.com/rs/SDWebImage/wiki/Download-Compiled-Framework) dependency to your project
 - Add `main.js`(which is in the `WeexSDK.framework`) to your main bundle
   ![img](http://img1.tbcdn.cn/L1/461/1/bb3998595bafe9c9336411160c0b6bd3eeb843ef)
   
