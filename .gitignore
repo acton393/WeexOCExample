@@ -6,6 +6,8 @@
 build/
 DerivedData/
 
+lib/WeexSDK.framework/WeexSDK
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
@@ -33,8 +35,8 @@ xcuserdata/
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-# Pods/
-
+Pods/
+Podfile.lock
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
