@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "WXImgLoaderDefaultImpl.h"
 
 #import <WeexSDK/WeexSDK.h>
 @interface AppDelegate ()
@@ -28,7 +29,7 @@
     // register module
     [WXSDKEngine registerModule:@"event" withClass:NSClassFromString(@"WXEventModule")];
     // register handler
-    [WXSDKEngine registerHandler:NSClassFromString(@"WXImgLoaderDefaultImpl") withProtocol:@protocol(WXImgLoaderProtocol)];
+    [WXSDKEngine registerHandler:[[WXImgLoaderDefaultImpl alloc] init] withProtocol:@protocol(WXImgLoaderProtocol)];
     //init SDK
     [WXSDKEngine initSDKEnviroment];
     
