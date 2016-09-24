@@ -14,6 +14,7 @@
 @property (nonatomic, strong) WXSDKInstance *instance;
 @property (nonatomic, strong) UIView *weexView;
 @property (nonatomic, assign) CGFloat weexHeight;
+@property (nonatomic, assign) CGFloat top;
 
 @end
 
@@ -23,8 +24,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _weexHeight = self.view.frame.size.height - 64;
+    
     [self.navigationController.navigationBar setHidden:YES];
+    if (!self.navigationController.navigationBar.hidden) {
+        _top = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    } else{
+        _top = CGRectGetMaxY([[UIApplication sharedApplication]statusBarFrame]);
+    }
+    _weexHeight = self.view.frame.size.height - _top;
     [self render];
 }
 
@@ -38,7 +45,7 @@
     _instance = [[WXSDKInstance alloc] init];
     _instance.viewController = self;
     CGFloat width = self.view.frame.size.width;
-    _instance.frame = CGRectMake(self.view.frame.size.width-width, 0, width, _weexHeight);
+    _instance.frame = CGRectMake(self.view.frame.size.width-width,_top, width, _weexHeight);
     
     __weak typeof(self) weakSelf = self;
     _instance.onCreate = ^(UIView *view) {
