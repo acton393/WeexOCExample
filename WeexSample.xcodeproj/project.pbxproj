@@ -13,9 +13,9 @@
 		DC5E50171D0D73550059F0EB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5E50161D0D73550059F0EB /* AVFoundation.framework */; };
 		DC5E50191D0D73820059F0EB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5E50181D0D73820059F0EB /* MediaPlayer.framework */; };
 		DC5E50331D0D7FC00059F0EB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5E50321D0D7FC00059F0EB /* CoreMedia.framework */; };
-		DC5E50361D0D80F20059F0EB /* WeexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFAEC6D1D0D381F0087102E /* WeexSDK.framework */; };
 		DC88BF5B1D9287DD00397396 /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = DC88BF591D9287DD00397396 /* WXEventModule.m */; };
 		DC88BF5E1D9287E400397396 /* WXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DC88BF5C1D9287E400397396 /* WXImgLoaderDefaultImpl.m */; };
+		DC95B4E91DA8FBC6005CA912 /* hello.js in Resources */ = {isa = PBXBuildFile; fileRef = DCFAEC7E1D0D587F0087102E /* hello.js */; };
 		DCFAEC581D0D36070087102E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFAEC571D0D36070087102E /* main.m */; };
 		DCFAEC5B1D0D36070087102E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFAEC5A1D0D36070087102E /* AppDelegate.m */; };
 		DCFAEC5E1D0D36070087102E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFAEC5D1D0D36070087102E /* ViewController.m */; };
@@ -62,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC5E50361D0D80F20059F0EB /* WeexSDK.framework in Frameworks */,
 				DC5E50331D0D7FC00059F0EB /* CoreMedia.framework in Frameworks */,
 				DC5E50191D0D73820059F0EB /* MediaPlayer.framework in Frameworks */,
 				DC5E50171D0D73550059F0EB /* AVFoundation.framework in Frameworks */,
@@ -196,6 +195,7 @@
 				DCFAEC511D0D36070087102E /* Resources */,
 				F780F83C3DB3DF2C262714FC /* [CP] Embed Pods Frameworks */,
 				56D80383DF6F60EBBBA0571C /* [CP] Copy Pods Resources */,
+				B4ED73FF67B0E41EBB063D55 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC95B4E91DA8FBC6005CA912 /* hello.js in Resources */,
 				DCFAEC661D0D36070087102E /* LaunchScreen.storyboard in Resources */,
 				DCFAEC631D0D36070087102E /* Assets.xcassets in Resources */,
 				DCFAEC611D0D36070087102E /* Main.storyboard in Resources */,
@@ -280,6 +281,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4ED73FF67B0E41EBB063D55 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeexSample/Pods-WeexSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F780F83C3DB3DF2C262714FC /* [CP] Embed Pods Frameworks */ = {
