@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "DemoeDefine.h"
+#import "WXImgLoaderDefaultImpl.h"
 
 #import <WeexSDK/WeexSDK.h>
 
@@ -33,6 +34,9 @@
     //set log
     [WXLog setLogLevel:WXLogLevelAll];
     
+    [WXSDKEngine registerModule:@"event" withClass:NSClassFromString(@"WXEventModule")];
+    
+    [WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     ViewController * viewController = [[ViewController alloc] init];
