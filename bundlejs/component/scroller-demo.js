@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;__weex_define__("@weex-component/64bb9dafb42adff502b07e697409ea4f", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/f1f72875b67ff8fc99140e84b54c814b", [], function(__weex_require__, __weex_exports__, __weex_module__){
 
 	;
 	  __webpack_require__(1);
@@ -53,16 +53,25 @@
 	      onrefresh: function(e) {
 	        var self = this;
 	        self.refresh_display = 'show';
-	        setTimeout(function () {
+	        self.$call('modal', 'toast', {
+	          'message': 'onrefresh'
+	        });
+	        this.$call('timer', 'setTimeout', function() {
 	          self.refresh_display = 'hide';
-	        }, 1000)
+	        }, 3000);
 	      },
 	      onloading: function(e) {
 	        var self = this;
 	        self.loading_display = 'show';
-	        setTimeout(function () {
+	        self.$call('modal', 'toast', {
+	          'message': 'onloading'
+	        });
+	        this.$call('timer', 'setTimeout', function() {
+	          if (self.sections.length <= 6) {
+	            self.sections.push(self.moreSections[self.sections.length - 2]);
+	          }
 	          self.loading_display = 'hide';
-	        }, 1000)
+	        }, 3000);
 	      }
 	    },
 	    data: function () {return {
@@ -143,8 +152,44 @@
 	  "classList": [
 	    "list"
 	  ],
-	  "append": "tree",
+	  "attr": {
+	    "append＝\"tree\"": ""
+	  },
 	  "children": [
+	    {
+	      "type": "refresh",
+	      "classList": [
+	        "refresh-view"
+	      ],
+	      "attr": {
+	        "display": function () {return this.refresh_display}
+	      },
+	      "events": {
+	        "refresh": "onrefresh"
+	      },
+	      "children": [
+	        {
+	          "type": "loading-indicator",
+	          "classList": [
+	            "indicator"
+	          ]
+	        },
+	        {
+	          "type": "text",
+	          "classList": [
+	            "refresh-arrow"
+	          ],
+	          "style": {
+	            "textAlign": "center",
+	            "color": "rgb(238,162,54)"
+	          },
+	          "shown": function () {return (this.refresh_display==='hide')},
+	          "attr": {
+	            "value": "Pull To Refresh"
+	          }
+	        }
+	      ]
+	    },
 	    {
 	      "type": "div",
 	      "classList": [
@@ -203,10 +248,9 @@
 	      "children": [
 	        {
 	          "type": "loading-indicator",
-	          "style": {
-	            "height": 60,
-	            "width": 60
-	          }
+	          "classList": [
+	            "indicator"
+	          ]
 	        }
 	      ]
 	    }
@@ -228,15 +272,18 @@
 	    "color": "#45b5f0"
 	  },
 	  "loading-view": {
-	    "height": 80,
 	    "width": 750,
-	    "justifyContent": "center",
+	    "height": 100,
+	    "display": "flex",
+	    "MsFlexAlign": "center",
+	    "WebkitAlignItems": "center",
+	    "WebkitBoxAlign": "center",
 	    "alignItems": "center"
 	  },
 	  "indicator": {
-	    "height": 40,
-	    "width": 40,
-	    "color": "#45b5f0"
+	    "height": 60,
+	    "width": 60,
+	    "color": "#889967"
 	  },
 	  "header": {
 	    "backgroundColor": "#45b5f0",
@@ -257,7 +304,7 @@
 	  }
 	})
 	})
-	;__weex_bootstrap__("@weex-component/64bb9dafb42adff502b07e697409ea4f", {
+	;__weex_bootstrap__("@weex-component/f1f72875b67ff8fc99140e84b54c814b", {
 	  "transformerVersion": "0.3.1"
 	},undefined)
 
@@ -265,7 +312,7 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;__weex_define__("@weex-component/index", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/index", [], function(__weex_require__, __weex_exports__, __weex_module__){
 
 	;
 	  __webpack_require__(2);
@@ -286,7 +333,7 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/wxc-button", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/wxc-button", [], function(__weex_require__, __weex_exports__, __weex_module__){
 
 	;
 	  __weex_module__.exports = {
@@ -414,7 +461,7 @@
 /* 3 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/wxc-hn", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/wxc-hn", [], function(__weex_require__, __weex_exports__, __weex_module__){
 
 	;
 	  __weex_module__.exports = {
@@ -475,7 +522,7 @@
 /* 4 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/wxc-list-item", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/wxc-list-item", [], function(__weex_require__, __weex_exports__, __weex_module__){
 
 	;
 	  __weex_module__.exports = {
@@ -533,7 +580,7 @@
 /* 5 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/wxc-panel", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/wxc-panel", [], function(__weex_require__, __weex_exports__, __weex_module__){
 
 	;
 	  __weex_module__.exports = {
@@ -643,7 +690,7 @@
 /* 6 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/wxc-tip", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/wxc-tip", [], function(__weex_require__, __weex_exports__, __weex_module__){
 
 	;
 	  __weex_module__.exports = {
@@ -714,7 +761,7 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/wxc-countdown", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/wxc-countdown", [], function(__weex_require__, __weex_exports__, __weex_module__){
 
 	;
 	__weex_module__.exports = {
@@ -831,7 +878,7 @@
 /* 8 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/wxc-marquee", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/wxc-marquee", [], function(__weex_require__, __weex_exports__, __weex_module__){
 
 	;
 	__weex_module__.exports = {
@@ -932,7 +979,7 @@
 /* 9 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/wxc-navbar", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/wxc-navbar", [], function(__weex_require__, __weex_exports__, __weex_module__){
 
 	;
 	    __weex_module__.exports = {
@@ -1126,25 +1173,8 @@
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;__weex_define__("@weex-component/wxc-navpage", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/wxc-navpage", [], function(__weex_require__, __weex_exports__, __weex_module__){
 	__webpack_require__(9);
-
-	;
-	    __weex_module__.exports = {
-	        data: function () {return {
-	          dataRole: 'navbar',
-	          backgroundColor: 'black',
-	          height: 88,
-	          title: "",
-	          titleColor: 'black',
-	          rightItemSrc: '',
-	          rightItemTitle: '',
-	          rightItemColor: 'black',
-	          leftItemSrc: '',
-	          leftItemTitle: '',
-	          leftItemColor: 'black',
-	        }}
-	    }
 
 	;__weex_module__.exports.template = __weex_module__.exports.template || {}
 	;Object.assign(__weex_module__.exports.template, {
@@ -1202,7 +1232,7 @@
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;__weex_define__("@weex-component/wxc-tabbar", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/wxc-tabbar", [], function(__weex_require__, __weex_exports__, __weex_module__){
 	__webpack_require__(12);
 
 	;
@@ -1322,7 +1352,7 @@
 /* 12 */
 /***/ function(module, exports) {
 
-	;__weex_define__("@weex-component/wxc-tabitem", [], function(__weex_require__, exports, __weex_module__){
+	;__weex_define__("@weex-component/wxc-tabitem", [], function(__weex_require__, __weex_exports__, __weex_module__){
 
 	;
 	    __weex_module__.exports = {

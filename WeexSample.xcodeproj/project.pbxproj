@@ -15,6 +15,7 @@
 		DC5E50331D0D7FC00059F0EB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5E50321D0D7FC00059F0EB /* CoreMedia.framework */; };
 		DC5E50361D0D80F20059F0EB /* WeexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFAEC6D1D0D381F0087102E /* WeexSDK.framework */; };
 		DC5E503A1D0D88A00059F0EB /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = DC5E50391D0D88A00059F0EB /* main.js */; };
+		DCAC40A11DB5D3C2006C6064 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAC40A01DB5D3C2006C6064 /* GLKit.framework */; };
 		DCC3E8531D93888700FDAD2F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC3E8521D93888700FDAD2F /* ImageIO.framework */; };
 		DCC3E8551D93888C00FDAD2F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC3E8541D93888C00FDAD2F /* CoreImage.framework */; };
 		DCC3E8571D9389BB00FDAD2F /* bundlejs in Resources */ = {isa = PBXBuildFile; fileRef = DCC3E8561D9389BB00FDAD2F /* bundlejs */; };
@@ -51,6 +52,7 @@
 		DC5E50181D0D73820059F0EB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		DC5E50321D0D7FC00059F0EB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		DC5E50391D0D88A00059F0EB /* main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = main.js; path = lib/WeexSDK.framework/main.js; sourceTree = "<group>"; };
+		DCAC40A01DB5D3C2006C6064 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		DCC3E8521D93888700FDAD2F /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		DCC3E8541D93888C00FDAD2F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		DCC3E8561D9389BB00FDAD2F /* bundlejs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundlejs; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAC40A11DB5D3C2006C6064 /* GLKit.framework in Frameworks */,
 				DCC3E8551D93888C00FDAD2F /* CoreImage.framework in Frameworks */,
 				DCC3E8531D93888700FDAD2F /* ImageIO.framework in Frameworks */,
 				DC5E50361D0D80F20059F0EB /* WeexSDK.framework in Frameworks */,
@@ -235,6 +238,7 @@
 		DCFAEC711D0D38370087102E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCAC40A01DB5D3C2006C6064 /* GLKit.framework */,
 				DCC3E8541D93888C00FDAD2F /* CoreImage.framework */,
 				DCC3E8521D93888700FDAD2F /* ImageIO.framework */,
 				DC5E50391D0D88A00059F0EB /* main.js */,
