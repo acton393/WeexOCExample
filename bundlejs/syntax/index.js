@@ -1278,7 +1278,7 @@
 
 	      var nativeBase;
 	      var isAndroidAssets = bundleUrl.indexOf('your_current_IP') >= 0 || bundleUrl.indexOf('file://assets/')>=0;
-	      var isiOSAssets = bundleUrl.indexOf('file:///') >= 0 && bundleUrl.indexOf('WeexDemo.app') > 0;
+	      var isiOSAssets = bundleUrl.indexOf('file:///') >= 0;
 	      if (isAndroidAssets) {
 	        nativeBase = 'file://assets/';
 	      }
