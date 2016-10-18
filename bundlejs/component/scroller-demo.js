@@ -98,21 +98,22 @@
 	            {id: 10},
 	            {id: 11}
 	          ]
-	        }
+	        },
+             {
+             title: 'Header 3',
+             items: [
+                     {id: 12},
+                     {id: 13},
+                     {id: 14},
+                     {id: 15},
+                     {id: 16},
+                     {id: 17},
+                     {id: 18}
+                     ]
+             }
 	      ],
 	      moreSections: [
-	        {
-	          title: 'Header 3',
-	          items: [
-	            {id: 12},
-	            {id: 13},
-	            {id: 14},
-	            {id: 15},
-	            {id: 16},
-	            {id: 17},
-	            {id: 18}
-	          ]
-	        },
+	       
 	        {
 	          title: 'Header 4',
 	          items: [

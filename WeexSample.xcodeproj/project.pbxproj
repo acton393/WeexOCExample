@@ -13,7 +13,6 @@
 		DC5E50171D0D73550059F0EB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5E50161D0D73550059F0EB /* AVFoundation.framework */; };
 		DC5E50191D0D73820059F0EB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5E50181D0D73820059F0EB /* MediaPlayer.framework */; };
 		DC5E50331D0D7FC00059F0EB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5E50321D0D7FC00059F0EB /* CoreMedia.framework */; };
-		DC5E50361D0D80F20059F0EB /* WeexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFAEC6D1D0D381F0087102E /* WeexSDK.framework */; };
 		DC5E503A1D0D88A00059F0EB /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = DC5E50391D0D88A00059F0EB /* main.js */; };
 		DCAC40A11DB5D3C2006C6064 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAC40A01DB5D3C2006C6064 /* GLKit.framework */; };
 		DCC3E8531D93888700FDAD2F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC3E8521D93888700FDAD2F /* ImageIO.framework */; };
@@ -35,6 +34,7 @@
 		DCC6B6151D93878C00045211 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC6B6031D93878C00045211 /* UIImageView+HighlightedWebCache.m */; };
 		DCC6B6161D93878C00045211 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC6B6051D93878C00045211 /* UIImageView+WebCache.m */; };
 		DCC6B6171D93878C00045211 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC6B6071D93878C00045211 /* UIView+WebCacheOperation.m */; };
+		DCEB68601DB601C2007202B4 /* WeexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEB685F1DB601C2007202B4 /* WeexSDK.framework */; };
 		DCEC6CB61D96786400C7FA7F /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEC6CB31D96786400C7FA7F /* WXEventModule.m */; };
 		DCEC6CB71D96786400C7FA7F /* WXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEC6CB51D96786400C7FA7F /* WXImgLoaderDefaultImpl.m */; };
 		DCEC6CBB1D96790E00C7FA7F /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEC6CBA1D96790E00C7FA7F /* SRWebSocket.m */; };
@@ -89,6 +89,7 @@
 		DCC6B6051D93878C00045211 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "lib/SDWebImage/UIImageView+WebCache.m"; sourceTree = SOURCE_ROOT; };
 		DCC6B6061D93878C00045211 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "lib/SDWebImage/UIView+WebCacheOperation.h"; sourceTree = SOURCE_ROOT; };
 		DCC6B6071D93878C00045211 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "lib/SDWebImage/UIView+WebCacheOperation.m"; sourceTree = SOURCE_ROOT; };
+		DCEB685F1DB601C2007202B4 /* WeexSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeexSDK.framework; path = lib/WeexSDK.framework; sourceTree = "<group>"; };
 		DCEC6CB21D96786400C7FA7F /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXEventModule.h; path = extend/WXEventModule.h; sourceTree = "<group>"; };
 		DCEC6CB31D96786400C7FA7F /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXEventModule.m; path = extend/WXEventModule.m; sourceTree = "<group>"; };
 		DCEC6CB41D96786400C7FA7F /* WXImgLoaderDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXImgLoaderDefaultImpl.h; path = extend/WXImgLoaderDefaultImpl.h; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		DCFAEC621D0D36070087102E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCFAEC651D0D36070087102E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCFAEC671D0D36070087102E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCFAEC6D1D0D381F0087102E /* WeexSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeexSDK.framework; path = lib/WeexSDK.framework; sourceTree = "<group>"; };
 		DCFAEC721D0D38810087102E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		DCFAEC761D0D3A7A0087102E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -115,10 +115,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCEB68601DB601C2007202B4 /* WeexSDK.framework in Frameworks */,
 				DCAC40A11DB5D3C2006C6064 /* GLKit.framework in Frameworks */,
 				DCC3E8551D93888C00FDAD2F /* CoreImage.framework in Frameworks */,
 				DCC3E8531D93888700FDAD2F /* ImageIO.framework in Frameworks */,
-				DC5E50361D0D80F20059F0EB /* WeexSDK.framework in Frameworks */,
 				DC5E50331D0D7FC00059F0EB /* CoreMedia.framework in Frameworks */,
 				DC5E50191D0D73820059F0EB /* MediaPlayer.framework in Frameworks */,
 				DC5E50171D0D73550059F0EB /* AVFoundation.framework in Frameworks */,
@@ -238,6 +238,7 @@
 		DCFAEC711D0D38370087102E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCEB685F1DB601C2007202B4 /* WeexSDK.framework */,
 				DCAC40A01DB5D3C2006C6064 /* GLKit.framework */,
 				DCC3E8541D93888C00FDAD2F /* CoreImage.framework */,
 				DCC3E8521D93888700FDAD2F /* ImageIO.framework */,
@@ -248,7 +249,6 @@
 				DC5E50141D0D73380059F0EB /* AVKit.framework */,
 				DCFAEC761D0D3A7A0087102E /* libicucore.tbd */,
 				DCFAEC721D0D38810087102E /* JavaScriptCore.framework */,
-				DCFAEC6D1D0D381F0087102E /* WeexSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
