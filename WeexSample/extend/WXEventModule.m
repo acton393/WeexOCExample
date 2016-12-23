@@ -17,6 +17,15 @@
 
 WX_EXPORT_METHOD(@selector(openURL:))
 
+// just for test case , you can not define a same name function.
+WX_EXPORT_METHOD(@selector(anotherOpenURL:callback:));
+
+- (void)anotherOpenURL:(NSString *)url callback:(WXKeepAliveCallback)callback {
+    callback(url,false);
+    NSLog(@"call me");
+}
+
+// end
 - (void)openURL:(NSString *)url
 {
     NSString *newURL = url;
